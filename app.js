@@ -8,4 +8,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to contact book application." });
 });
+const contactsRouter = require("./app/routers/contact.route");
+app.use("/api/contacts", contactsRouter);
 module.exports = app;
